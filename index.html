@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Kanto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+	
+	<script src="phonegap.js"></script>
+	<script src="lib/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("mobileinit", function(){
+			//page transitions flashing OFF.
+			$.mobile.defaultPageTransition = 'none';
+			$.mobile.defaultDialogTransition = "none";
+			$.mobile.loader.prototype.options.textVisible = true;
+			$.mobile.loader.prototype.options.theme = "b";
+		});
+	</script>
+	<script src="lib/jquery.mobile-1.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+
+<body onload="onLoad()">
+	<!--
+	Home page
+	-->
+	<div data-role="page" id="home-page" style="display: none;">
+    <div data-theme="a" data-role="header" data-position="fixed">
+      <h3>Bubbles</h3>	
+    </div>
+    <div data-role="content">
+			<a href="app-en.html"><img src="img/en-flag.jpg" /></a>
+			<a href="app-th.html"><img src="img/th-flag.jpg" /></a>
+    </div>	
+	</div><!-- /home-page -->
+	
+	
+
+</body>
+</html>
