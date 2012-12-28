@@ -8,7 +8,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<link rel="stylesheet" href="css/home.css" />
+	<link rel="stylesheet" href="css/styles.css" />
 	
 	<script src="phonegap.js"></script>
 	<script src="lib/jquery-1.8.3.min.js"></script>
@@ -38,12 +38,61 @@
 	-->
 	<div data-role="page" id="home-page">
     <div data-theme="a" data-role="header" data-position="fixed">
-      <h3>Thai Bubbles</h3>	
+      <h3>Thai Fizz</h3>	
     </div>
-    <div data-role="content">
+    <div>
 			
-			English
+			<div id="now">
+				<div class="sub-header">
+					<span>Bubbles now</span>
+					<div style="float: right; margin-right: 10px;"><a href="javascript:void(0);">More &GT;</a></div>
+				</div>
+				<div class="bubble-left">
+					<a href="#bubble-details">
+						<div class="bubble-top">
+							<img src="img/home.jpg" style="float: left; margin-right: 4px;" />
+							<div class="title">10% off all beers at the holly hell bar</div>
+						</div>
+						<div class="bubble-bottom">
+							<div class="bubble-bottom-stars" style="display: inline-block;">
+								<img src="img/0_stars.png"  />
+							</div>
+							<div class="bubble-bottom-time">
+								12:00
+							</div>
+						</div>
+					</a>
+				</div>
+				
+				<div class="bubble-right">
+					<div class="bubble-top">
+						<img src="img/home.jpg" style="float: left; margin-right: 4px;" />
+						<div class="title">Title</div>
+					</div>
+					<div class="bubble-bottom">
+						<div class="bubble-bottom-stars" style="display: inline-block;">
+							<img src="img/0_stars.png"  />
+						</div>
+						<div class="bubble-bottom-time">
+							12:00
+						</div>
+					</div>
+				</div>
 						
+			</div><!-- Bubbles now -->
+			
+			<div id="coming">
+				<div class="sub-header">					
+					<span>Coming Bubbles</span>
+					<div style="float: right; margin-right: 10px;"><a href="javascript:void(0);">More &GT;</a></div>
+				</div>				
+			</div>
+			<div id="hot">
+				<div class="sub-header">
+					<span>Hottest Bubbles</span>
+					<div style="float: right; margin-right: 10px;"><a href="javascript:void(0);">More &GT;</a></div>					
+				</div>
+			</div>
     </div>
 
 	<script type="text/javascript">
@@ -52,11 +101,35 @@
 			
 			app.initialize();
 			
+			
 			});
 	</script>
 	
 	</div><!-- /home-page -->
 	
+	<!--
+	Details page
+	-->
+	<div data-role="page" id="bubble-details">
+    <div data-theme="a" data-role="header" data-position="fixed">
+      <h3>Thai Fizz</h3>	
+    </div>
+
+    <div>
+			Details
+    </div>
+
+	<script type="text/javascript">
+				
+		$( document ).on( "pageshow", "#bubble-details",  function() {
+			
+			app.initialize();
+			
+			
+			});
+	</script>
+	
+	</div><!-- /home-page -->
 
 </body>
 </html>
